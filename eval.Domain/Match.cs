@@ -6,7 +6,7 @@ namespace eval.Domain
     {
         public int Id { get; set; }
         public DateTime Date { get; set; }
-        public string Opponent { get; set; }
+        public string OpponentName { get; set; }
         public string ReasonForLoss { get; set; }
     }
 }
