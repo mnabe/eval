@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mathi\\source\\repos\\eval\\eval.Domain\\eval.Domain.csproj": {}
+    "C:\\Users\\mathi\\source\\repos\\eval\\src\\eval.Domain\\eval.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mathi\\source\\repos\\eval\\eval.Domain\\eval.Domain.csproj": {
+    "C:\\Users\\mathi\\source\\repos\\eval\\src\\eval.Domain\\eval.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mathi\\source\\repos\\eval\\eval.Domain\\eval.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\mathi\\source\\repos\\eval\\src\\eval.Domain\\eval.Domain.csproj",
         "projectName": "eval.Domain",
-        "projectPath": "C:\\Users\\mathi\\source\\repos\\eval\\eval.Domain\\eval.Domain.csproj",
+        "projectPath": "C:\\Users\\mathi\\source\\repos\\eval\\src\\eval.Domain\\eval.Domain.csproj",
         "packagesPath": "C:\\Users\\mathi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mathi\\source\\repos\\eval\\eval.Domain\\obj\\",
+        "outputPath": "C:\\Users\\mathi\\source\\repos\\eval\\src\\eval.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
