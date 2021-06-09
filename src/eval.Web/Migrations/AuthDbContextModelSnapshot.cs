@@ -206,9 +206,6 @@ namespace eval.Web.Migrations
                         .HasColumnType("nvarchar(256)")
                         .HasMaxLength(256);
 
-                    b.Property<string>("Username")
-                        .HasColumnType("nvarchar(40)");
-
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedEmail")
