@@ -88,7 +88,7 @@ namespace eval.Web.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return LocalRedirect("~/Home/Privacy");
+                    return LocalRedirect("~/Match/Index");
                 }
                 if (result.RequiresTwoFactor)
                 {
