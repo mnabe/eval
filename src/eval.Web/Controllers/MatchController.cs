@@ -20,7 +20,6 @@ namespace eval.Web.Controllers
         public async Task<IActionResult> Index()
         {
             var response = await ApiHelper.ApiClient.GetAsync("username?username=" + User.Identity.Name);
-
             var result = await response.Content.ReadAsStringAsync();
             var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             List<MatchViewModel> match = JsonSerializer.Deserialize<List<MatchViewModel>>(result, options);
