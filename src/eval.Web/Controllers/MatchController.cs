@@ -27,11 +27,8 @@ namespace eval.Web.Controllers
             var response = await ApiHelper.ApiClient.GetAsync("username?username=" + User.Identity.Name);
 
             var result = await response.Content.ReadAsStringAsync();
-            //MatchViewModel match = JsonSerializer.Deserialize<MatchViewModel>(result);
-            List<MatchViewModel> match = JsonSerializer.Deserialize<List<MatchViewModel>>(result, new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            });
+            var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            List<MatchViewModel> match = JsonSerializer.Deserialize<List<MatchViewModel>>(result, options);
             return View(match);
         }
 
