@@ -9,6 +9,9 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Text.Json;
 using System.Text;
+using eval.Web.Data;
+using eval.Web.Areas.Identity.Data;
+using Microsoft.AspNetCore.Identity;
 
 namespace eval.Web.Controllers
 {
@@ -34,6 +37,7 @@ namespace eval.Web.Controllers
 
         public async Task<IActionResult> CreateMatch(CreateMatchViewModel model)
         {
+            model.UserName = User.Identity.Name;
             var json = JsonSerializer.Serialize(model);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             var response = await ApiHelper.ApiClient.PostAsync("", content);
