@@ -2,16 +2,11 @@
 using eval.Web.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Text.Json;
 using System.Text;
-using eval.Web.Data;
-using eval.Web.Areas.Identity.Data;
-using Microsoft.AspNetCore.Identity;
 
 namespace eval.Web.Controllers
 {
