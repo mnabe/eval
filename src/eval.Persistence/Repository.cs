@@ -1,16 +1,12 @@
 ﻿using eval.Domain;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace eval.Persistence
 {
     public class Repository
     {
         private readonly TempContext _context;
-
         public Repository(TempContext context)
         {
             _context = context;
@@ -32,7 +28,6 @@ namespace eval.Persistence
             } 
             return matches;
         }
-
         public void Create(Match match)
         {
             MatchEntity entity = new MatchEntity();
