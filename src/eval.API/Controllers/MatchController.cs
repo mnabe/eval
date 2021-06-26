@@ -21,10 +21,10 @@ namespace eval.API.Controllers
             _repository = repository;
         }
 
-        [HttpGet]
-        public IEnumerable<Match> GetAll()
+        [HttpGet("username")]
+        public IEnumerable<Match> GetAll(string username)
         {
-           var response = _repository.GetAll();
+           var response = _repository.GetAll(username);
             return response;
         }
 
@@ -32,6 +32,7 @@ namespace eval.API.Controllers
         public IActionResult Create([FromBody] CreateMatchDto matchDto)
         {
             Match match = new Match();
+            match.UserName = matchDto.UserName;
             match.Date = matchDto.Date;
             match.OpponentName = matchDto.OpponentName;
             match.ReasonForLoss = matchDto.ReasonForLoss;
