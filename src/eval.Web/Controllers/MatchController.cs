@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Text.Json;
 using System.Text;
+using eval.Domain;
 
 namespace eval.Web.Controllers
 {
@@ -22,7 +23,7 @@ namespace eval.Web.Controllers
             var response = await ApiHelper.ApiClient.GetAsync("username?username=" + User.Identity.Name);
             var result = await response.Content.ReadAsStringAsync();
             var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-            List<MatchViewModel> match = JsonSerializer.Deserialize<List<MatchViewModel>>(result, options);
+            List<Match> match = JsonSerializer.Deserialize<List<Match>>(result, options);
             return View(match);
         }
 
