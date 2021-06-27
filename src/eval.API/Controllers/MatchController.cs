@@ -1,6 +1,6 @@
-﻿using eval.API.DTO;
-using eval.Domain;
+﻿using eval.Domain;
 using eval.Persistence;
+using eval.Persistence.DTO;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -10,8 +10,8 @@ namespace eval.API.Controllers
     [ApiController]
     public class MatchController : ControllerBase
     {
-        public readonly Repository _repository;
-        public MatchController(Repository repository)
+        public readonly IRepository _repository;
+        public MatchController(IRepository repository)
         {
             _repository = repository;
         }
@@ -26,12 +26,12 @@ namespace eval.API.Controllers
         [HttpPost]
         public IActionResult Create([FromBody] CreateMatchDto matchDto)
         {
-            Match match = new Match();
-            match.UserName = matchDto.UserName;
-            match.Date = matchDto.Date;
-            match.OpponentName = matchDto.OpponentName;
-            match.ReasonForLoss = matchDto.ReasonForLoss;
-            _repository.Create(match);
+            //Match match = new Match();
+            //match.UserName = matchDto.UserName;
+            //match.Date = matchDto.Date;
+            //match.OpponentName = matchDto.OpponentName;
+            //match.ReasonForLoss = matchDto.ReasonForLoss;
+            _repository.Create(matchDto);
             return Ok();
         }
     }
