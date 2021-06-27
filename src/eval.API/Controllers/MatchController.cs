@@ -26,11 +26,6 @@ namespace eval.API.Controllers
         [HttpPost]
         public IActionResult Create([FromBody] CreateMatchDto matchDto)
         {
-            //Match match = new Match();
-            //match.UserName = matchDto.UserName;
-            //match.Date = matchDto.Date;
-            //match.OpponentName = matchDto.OpponentName;
-            //match.ReasonForLoss = matchDto.ReasonForLoss;
             _repository.Create(matchDto);
             return Ok();
         }
