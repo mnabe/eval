@@ -1,10 +1,9 @@
 ﻿using System;
 
-namespace eval.Domain
+namespace eval.Web.Models
 {
-    public class Match
+    public class CreateMatchViewModel
     {
-        public int Id { get; set; }
         public string UserName { get; set; }
         public DateTime Date { get; set; }
         public string OpponentName { get; set; }

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace eval.Domain
+namespace eval.Persistence
 {
-    public class Match
+    public class MatchEntity
     {
         public int Id { get; set; }
         public string UserName { get; set; }

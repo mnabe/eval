@@ -1,10 +1,9 @@
 ﻿using System;
 
-namespace eval.Domain
+namespace eval.Persistence.DTO
 {
-    public class Match
+    public class CreateMatchDto
     {
-        public int Id { get; set; }
         public string UserName { get; set; }
         public DateTime Date { get; set; }
         public string OpponentName { get; set; }
