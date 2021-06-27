@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace eval.API.DTO
+namespace eval.Persistence.DTO
 {
     public class CreateMatchDto
     {
