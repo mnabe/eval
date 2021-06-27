@@ -19,7 +19,7 @@ namespace eval.API.Controllers
         [HttpGet("username")]
         public IEnumerable<Match> GetAll(string username)
         {
-           var response = _repository.GetAll(username);
+            var response = _repository.GetAll(username);
             return response;
         }
 
