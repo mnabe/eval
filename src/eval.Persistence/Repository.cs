@@ -1,15 +1,19 @@
-﻿using eval.Domain;
+﻿using AutoMapper;
+using eval.Domain;
+using eval.Persistence.DTO;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace eval.Persistence
 {
-    public class Repository
+    public class Repository: IRepository
     {
         private readonly TempContext _context;
-        public Repository(TempContext context)
+        private readonly IMapper _mapper;
+        public Repository(TempContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         public IEnumerable<Match> GetAll(string username)
@@ -18,23 +22,14 @@ namespace eval.Persistence
             List<Match> matches = new List<Match>();
             foreach (var item in response)
             {
-                Match match = new Match();
-                match.Id = item.Id;
-                match.UserName = item.UserName;
-                match.Date = item.Date;
-                match.OpponentName = item.OpponentName;
-                match.ReasonForLoss = item.ReasonForLoss;
+                Match match = _mapper.Map<Match>(item);
                 matches.Add(match);
             } 
             return matches;
         }
-        public void Create(Match match)
+        public void Create(CreateMatchDto matchDto)
         {
-            MatchEntity entity = new MatchEntity();
-            entity.Date = match.Date;
-            entity.UserName = match.UserName;
-            entity.OpponentName = match.OpponentName;
-            entity.ReasonForLoss = match.ReasonForLoss;
+            MatchEntity entity = _mapper.Map<MatchEntity>(matchDto);
             _context.MatchEntities.Add(entity);
             _context.SaveChanges();
         }
