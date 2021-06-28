@@ -1,13 +1,6 @@
 ﻿using eval.Persistence;
 using Moq;
-using eval.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
-using Match = eval.Domain.Match;
 using eval.API.Controllers;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
