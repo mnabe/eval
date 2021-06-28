@@ -17,10 +17,10 @@ namespace eval.API.Controllers
         }
 
         [HttpGet("username")]
-        public IEnumerable<Match> GetAll(string username)
+        public IActionResult GetAll(string username)
         {
             var response = _repository.GetAll(username);
-            return response;
+            return Ok(response);
         }
 
         [HttpPost]
