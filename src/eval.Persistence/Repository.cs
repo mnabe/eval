@@ -18,7 +18,7 @@ namespace eval.Persistence
 
         public IEnumerable<Match> GetAll(string username)
         {
-            var response = _context.MatchEntities.AsEnumerable().Where(x => x.UserName == username);
+            var response = _context.MatchEntities.AsEnumerable().Where(x => x.UserName == username); //TODO: Should be possible to map to match while retrieving matches, which would get rid of the matches-List and foreach loop
             List<Match> matches = new List<Match>();
             foreach (var item in response)
             {
