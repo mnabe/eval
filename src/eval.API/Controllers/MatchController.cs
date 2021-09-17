@@ -3,6 +3,7 @@ using eval.Persistence;
 using eval.Persistence.DTO;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace eval.API.Controllers
 {
@@ -23,10 +24,24 @@ namespace eval.API.Controllers
             return Ok(response);
         }
 
-        [HttpPost]
-        public IActionResult Create([FromBody] CreateMatchDto matchDto)
+        [HttpGet]
+        public IActionResult Get([FromQuery] int id)
         {
-            _repository.Create(matchDto);
+            var response = _repository.Get(id);
+            return Ok(response);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] CreateMatchDto matchDto)
+        {
+            await _repository.Create(matchDto);
+            return Ok();
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> Edit([FromBody] EditMatchDto matchDto)
+        {
+            await _repository.Edit(matchDto);
             return Ok();
         }
     }
