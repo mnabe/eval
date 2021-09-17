@@ -41,5 +41,23 @@ namespace eval.Web.Controllers
             var responseString = await response.Content.ReadAsStringAsync();
             return Ok(responseString);
         }
+
+        public async Task<IActionResult> Edit(int id)
+        {
+            var response = await ApiHelper.ApiClient.GetAsync("?id=" + id);
+            var result = await response.Content.ReadAsStringAsync();
+            var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            Match match = JsonSerializer.Deserialize<Match>(result, options);
+            return View(match);
+        }
+
+        public async Task<IActionResult> EditMatch(EditMatchViewModel model)
+        {
+            model.UserName = User.Identity.Name;
+            var json = JsonSerializer.Serialize(model);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var response = await ApiHelper.ApiClient.PutAsync("", content);
+            return RedirectToAction("Index");
+        }
     }
 }
