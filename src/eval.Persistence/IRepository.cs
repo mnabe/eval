@@ -10,7 +10,9 @@ namespace eval.Persistence
 {
     public interface IRepository
     {
+        Match Get(int id);
         IEnumerable<Match> GetAll(string username);
-        void Create(CreateMatchDto matchDto);
+        Task Create(CreateMatchDto matchDto);
+        Task Edit(EditMatchDto matchDto);
     }
 }
