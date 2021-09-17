@@ -3,6 +3,7 @@ using eval.Persistence;
 using eval.Persistence.DTO;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace eval.API.Controllers
 {
@@ -17,16 +18,30 @@ namespace eval.API.Controllers
         }
 
         [HttpGet("username")]
-        public IEnumerable<Match> GetAll(string username)
+        public IActionResult GetAll(string username)
         {
             var response = _repository.GetAll(username);
-            return response;
+            return Ok(response);
+        }
+
+        [HttpGet]
+        public IActionResult Get([FromQuery] int id)
+        {
+            var response = _repository.Get(id);
+            return Ok(response);
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody] CreateMatchDto matchDto)
+        public async Task<IActionResult> Create([FromBody] CreateMatchDto matchDto)
         {
-            _repository.Create(matchDto);
+            await _repository.Create(matchDto);
+            return Ok();
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> Edit([FromBody] EditMatchDto matchDto)
+        {
+            await _repository.Edit(matchDto);
             return Ok();
         }
     }

@@ -27,6 +27,7 @@ namespace eval.API
             {
                 cfg.CreateMap<MatchEntity, Match>();
                 cfg.CreateMap<CreateMatchDto, MatchEntity>();
+                cfg.CreateMap<EditMatchDto, MatchEntity>();
             });
             IMapper mapper = configuration.CreateMapper();
             services.AddSingleton(mapper);
