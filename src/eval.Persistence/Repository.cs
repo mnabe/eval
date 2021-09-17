@@ -55,5 +55,12 @@ namespace eval.Persistence
             //_context.Entry(entity).Property(p => p.ReasonForLoss).IsModified = true;
             await _context.SaveChangesAsync();
         }
+
+        public async Task Delete(int id)
+        {
+            var entity = _context.MatchEntities.FirstOrDefault(x => x.Id == id);
+            _context.MatchEntities.Remove(entity);
+            await _context.SaveChangesAsync();
+        }
     }
 }
