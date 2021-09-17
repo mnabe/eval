@@ -68,5 +68,11 @@ namespace eval.Web.Controllers
             Match match = JsonSerializer.Deserialize<Match>(result, options);
             return View(match);
         }
+
+        public async Task<IActionResult> DeleteMatch(int id)
+        {
+            await ApiHelper.ApiClient.DeleteAsync("?id=" + id);
+            return RedirectToAction("Index");
+        }
     }
 }
