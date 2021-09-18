@@ -38,7 +38,7 @@
     </dl>
     
     <form asp-action="View">
-        <input asp-action="DeleteMatch" asp-route-id="model.Id" type="submit" value="Delete" class="btn btn-danger" /> |
+        <input asp-action="DeleteMatch" type="submit" value="Delete" class="btn btn-danger" asp-route-id="@Model.Id"/> |
         <a asp-action="Index">Back to List</a>
     </form>
 </div>
