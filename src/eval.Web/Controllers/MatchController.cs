@@ -59,5 +59,20 @@ namespace eval.Web.Controllers
             var response = await ApiHelper.ApiClient.PutAsync("", content);
             return RedirectToAction("Index");
         }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            var response = await ApiHelper.ApiClient.GetAsync("?id=" + id);
+            var result = await response.Content.ReadAsStringAsync();
+            var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            Match match = JsonSerializer.Deserialize<Match>(result, options);
+            return View(match);
+        }
+
+        public async Task<IActionResult> DeleteMatch(int id)
+        {
+            await ApiHelper.ApiClient.DeleteAsync("?id=" + id);
+            return RedirectToAction("Index");
+        }
     }
 }

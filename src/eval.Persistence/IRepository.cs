@@ -14,5 +14,6 @@ namespace eval.Persistence
         IEnumerable<Match> GetAll(string username);
         Task Create(CreateMatchDto matchDto);
         Task Edit(EditMatchDto matchDto);
+        Task Delete(int it);
     }
 }

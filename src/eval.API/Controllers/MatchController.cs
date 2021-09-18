@@ -44,5 +44,12 @@ namespace eval.API.Controllers
             await _repository.Edit(matchDto);
             return Ok();
         }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete([FromQuery] int id)
+        {
+            await _repository.Delete(id);
+            return Ok();
+        }
     }
 }
