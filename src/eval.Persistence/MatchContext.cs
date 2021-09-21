@@ -2,9 +2,9 @@
 
 namespace eval.Persistence
 {
-    public class TempContext: DbContext
+    public class MatchContext: DbContext
     {
-        public TempContext(DbContextOptions<TempContext> options): base(options)
+        public MatchContext(DbContextOptions<MatchContext> options): base(options)
         {
         }
 

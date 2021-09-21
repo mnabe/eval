@@ -8,9 +8,9 @@ namespace eval.Persistence
     {
         public static IServiceCollection AddPersistenceDependencies(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<TempContext>(options =>
+            services.AddDbContext<MatchContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("TempConnection"));
+                options.UseSqlServer(configuration.GetConnectionString("EvalMatchConnection"));
             });
             return services;
         }
