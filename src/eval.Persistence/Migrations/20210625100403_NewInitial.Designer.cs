@@ -9,7 +9,7 @@ using eval.Persistence;
 
 namespace eval.Persistence.Migrations
 {
-    [DbContext(typeof(TempContext))]
+    [DbContext(typeof(MatchContext))]
     [Migration("20210625100403_NewInitial")]
     partial class NewInitial
     {

@@ -9,9 +9,9 @@ namespace eval.Persistence
 {
     public class Repository: IRepository
     {
-        private readonly TempContext _context;
+        private readonly MatchContext _context;
         private readonly IMapper _mapper;
-        public Repository(TempContext context, IMapper mapper)
+        public Repository(MatchContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

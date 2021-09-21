@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace eval.Persistence.Migrations
 {
-    [DbContext(typeof(TempContext))]
+    [DbContext(typeof(MatchContext))]
     partial class TempContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

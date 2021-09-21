@@ -9,7 +9,7 @@ using eval.Persistence;
 
 namespace eval.Persistence.Migrations
 {
-    [DbContext(typeof(TempContext))]
+    [DbContext(typeof(MatchContext))]
     [Migration("20210626111928_AddUsername")]
     partial class AddUsername
     {
