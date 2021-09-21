@@ -10,7 +10,7 @@ namespace eval.Web.ApiConfig
         public static void InitializeClient()
         {
             ApiClient = new HttpClient();
-            ApiClient.BaseAddress = new Uri("https://localhost:44393/api/Match/");
+            ApiClient.BaseAddress = new Uri("https://evalwebmvc.azurewebsites.net/matchindex/api/Match"); //https://localhost:44393/api/Match/ //https://evalwebmvc.azurewebsites.net/matchindex
             ApiClient.DefaultRequestHeaders.Accept.Clear();
             ApiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
