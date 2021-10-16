@@ -21,10 +21,8 @@ namespace eval.Web.Controllers
         public async Task<IActionResult> Index()
         {
             var response = await ApiHelper.ApiClient.GetAsync("username?username=" + User.Identity.Name);
-            var result = await response.Content.ReadAsStringAsync();
-            var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-            List<Match> match = JsonSerializer.Deserialize<List<Match>>(result, options);
-            return View(match);
+            var result = await response.Content.ReadAsAsync<List<Match>>();
+            return View(result);
         }
 
         public IActionResult Create()
