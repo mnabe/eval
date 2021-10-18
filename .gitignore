@@ -533,3 +533,15 @@ FodyWeavers.xsd
 *.tlog
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,csharp
+/src/eval.API/.config/dotnet-tools.json
+/src/eval.API/Properties/ServiceDependencies/evalwebmvc-api - Web Deploy/apis1.arm.json
+/src/eval.API/Properties/ServiceDependencies/evalwebmvc-api - Web Deploy/mssql1.arm.json
+/src/eval.API/Properties/ServiceDependencies/evalwebmvc-api - Web Deploy/profile.arm.json
+/src/eval.API/Properties/serviceDependencies.evalwebmvc-api - Web Deploy.json
+/src/eval.API/Properties/serviceDependencies.json
+/src/eval.Web/Properties/ServiceDependencies/evalWebMVC - Web Deploy/mssql2.arm.json
+/src/eval.Web/Properties/ServiceDependencies/evalWebMVC - Web Deploy/profile.arm.json
+/src/eval.Web/Properties/serviceDependencies.evalWebMVC - Web Deploy.json
+/src/eval.Web/Properties/serviceDependencies.json
+/src/eval.Web/Properties/serviceDependencies.local.json
+/src/eval.Web/appSecrets.json
