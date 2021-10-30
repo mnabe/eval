@@ -1,7 +1,7 @@
 # eval
-Simple tool for chess players to keep track of chess games and analysis. Expected release is ultimo 2021.
+Simple tool for chess players to keep track of chess games and analysis. Expected release is ultimo 2021, where the website/application will go live. The link will be provided in this README.
 
-## About
+## Background/about
 For ambitious chess players, careful analysis of played games (especially defeats/draws) is an important tool in learning from past mistakes. This application is intended to serve as a platform for players to store and keep track of played games and analysis, which can serve as focal points for future improvement efforts.
 
 ## Screenshot of eval in use
