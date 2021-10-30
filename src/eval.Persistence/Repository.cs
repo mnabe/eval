@@ -32,7 +32,8 @@ namespace eval.Persistence
             {
                 Match match = _mapper.Map<Match>(item);
                 matches.Add(match);
-            } 
+            }
+            matches = matches.OrderByDescending(x => x.Date).ToList();
             return matches;
         }
         public async Task Create(CreateMatchDto matchDto)
