@@ -36,8 +36,9 @@ namespace eval.Web.Controllers
             var json = JsonSerializer.Serialize(model);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
             var response = await ApiHelper.ApiClient.PostAsync("", content);
-            var responseString = await response.Content.ReadAsStringAsync();
-            return Ok(responseString);
+            await response.Content.ReadAsStringAsync();
+            return RedirectToAction("Index");
+            //return Ok(responseString);
         }
 
         public async Task<IActionResult> Edit(int id)

@@ -16,6 +16,10 @@ namespace eval.Web.Controllers
 
         public IActionResult Index()
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return LocalRedirect("~/Match/Index");
+            }
             return View();
         }
 
