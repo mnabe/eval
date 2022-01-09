@@ -1,5 +1,5 @@
 # eval
-Simple tool for chess players to keep track of chess games and analysis. Expected release is ultimo 2021, where the website/application will go live.
+Simple tool for chess players to keep track of chess games and analysis.
 
 Give it a try right away at https://evalwebmvc.azurewebsites.net/
 
