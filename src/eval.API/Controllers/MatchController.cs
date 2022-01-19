@@ -1,6 +1,7 @@
 ﻿using eval.Domain;
 using eval.Persistence;
 using eval.Persistence.DTO;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace eval.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class MatchController : ControllerBase
     {
         public readonly IRepository _repository;
