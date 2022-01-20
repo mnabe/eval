@@ -545,3 +545,9 @@ FodyWeavers.xsd
 /src/eval.Web/Properties/serviceDependencies.json
 /src/eval.Web/Properties/serviceDependencies.local.json
 /src/eval.Web/appSecrets.json
+/src/eval.API/Properties/ServiceDependencies/evalAPI20220119222134 - Web Deploy/apis1.arm.json
+/src/eval.API/Properties/serviceDependencies.evalAPI20220119222134 - Web Deploy.json
+/src/eval.API/Properties/serviceDependencies.local.json
+/src/eval.API/Properties/serviceDependencies.evalAPI-appservice - Web Deploy.json
+/src/eval.API/Properties/ServiceDependencies/evalAPI-appservice - Web Deploy/profile.arm.json
+/src/eval.API/Properties/ServiceDependencies/evalAPI-appservice - Web Deploy/apis1.arm.json
