@@ -10,7 +10,7 @@ namespace eval.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class MatchController : ControllerBase
     {
         public readonly IRepository _repository;
