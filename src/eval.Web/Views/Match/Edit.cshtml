@@ -33,7 +33,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Color" class="control-label"></label>
-                <input asp-for="Color" class="form-control" />
+                <select asp-for="Color" asp-items="Html.GetEnumSelectList(typeof(eval.Domain.Enums.Color))" class="form-control"></select>
                 <span asp-validation-for="Color" class="text-danger"></span>
             </div>
             <div class="form-group">

@@ -8,7 +8,7 @@ namespace eval.Domain.Enums
 {
     public enum Color
     {
-        Black,
-        White
+        Black = 0,
+        White = 1
     }
 }
