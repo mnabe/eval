@@ -48,7 +48,11 @@ namespace eval.Persistence
             var entity = await _context.MatchEntities.FindAsync(matchDto.Id);
             entity.Date = matchDto.Date;
             entity.OpponentName = matchDto.OpponentName;
+            entity.TimeControl = matchDto.TimeControl;
+            entity.Color = matchDto.Color;
+            entity.Opening = matchDto.Opening;
             entity.ReasonForLoss = matchDto.ReasonForLoss;
+            entity.SiteForMatch = matchDto.SiteForMatch;
 
             //_context.Attach(entity);
             //_context.Entry(entity).Property(p => p.Date).IsModified = true;
