@@ -20,9 +20,20 @@
                 Opponent
             </th>
             <th>
+                Time control
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Opening)
+            </th>
+            <th>
                 Reason for loss or draw
             </th>
-            <th></th>
+            <th>
+                Site for match
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -34,21 +45,33 @@
         {
             @foreach (var item in Model)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Date)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.OpponentName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ReasonForLoss)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                    </td>
-                </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OpponentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeControl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Opening)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReasonForLoss)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SiteForMatch)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+        </td>
+    </tr>
             }
         }
     </tbody>

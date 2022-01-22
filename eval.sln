@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eval.API", "src\eval.API\ev
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eval.Persistence", "src\eval.Persistence\eval.Persistence.csproj", "{23F6462F-D525-42BC-B4C7-808514935283}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eval.Tests", "tests\eval.Tests\eval.Tests.csproj", "{A4376097-A0BD-488C-88F6-CEAA790362BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eval.Tests", "tests\eval.Tests\eval.Tests.csproj", "{A4376097-A0BD-488C-88F6-CEAA790362BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
