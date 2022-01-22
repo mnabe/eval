@@ -8,12 +8,12 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Id" class="control-label"></label>
-                <input asp-for="Id" class="form-control" readonly/>
+                <input asp-for="Id" class="form-control" readonly />
                 <span asp-validation-for="Id" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="UserName" class="control-label"></label>
-                <input asp-for="UserName" class="form-control" readonly/>
+                <input asp-for="UserName" class="form-control" readonly />
                 <span asp-validation-for="UserName" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -27,9 +27,29 @@
                 <span asp-validation-for="OpponentName" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="TimeControl" class="control-label"></label>
+                <input asp-for="TimeControl" class="form-control" />
+                <span asp-validation-for="TimeControl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Color" class="control-label"></label>
+                <input asp-for="Color" class="form-control" />
+                <span asp-validation-for="Color" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Opening" class="control-label"></label>
+                <input asp-for="Opening" class="form-control" />
+                <span asp-validation-for="Opening" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="ReasonForLoss" class="control-label"></label>
                 <input asp-for="ReasonForLoss" class="form-control" />
                 <span asp-validation-for="ReasonForLoss" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SiteForMatch" class="control-label"></label>
+                <input asp-for="SiteForMatch" class="form-control" />
+                <span asp-validation-for="SiteForMatch" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input asp-action="EditMatch" type="submit" value="Save changes" class="btn btn-primary" />
