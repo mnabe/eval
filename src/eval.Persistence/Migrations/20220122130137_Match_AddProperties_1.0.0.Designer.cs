@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using eval.Persistence;
 
 namespace eval.Persistence.Migrations
 {
     [DbContext(typeof(MatchContext))]
-    partial class TempContextModelSnapshot : ModelSnapshot
+    [Migration("20220122130137_Match_AddProperties_1.0.0")]
+    partial class Match_AddProperties_100
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
