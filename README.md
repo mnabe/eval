@@ -11,5 +11,5 @@ If you have suggestions for improvement/new feature, experience an error or simi
 
 ## Screenshot of eval in use
 <p align="center">
-  <img width="845" alt="evalMatchIndex-cropped-second" src="https://user-images.githubusercontent.com/32497085/139532882-7f5ad3f0-ae6d-4d7d-941c-dcdbf89fcc31.png">
+  <img width="845" alt="evalMatchIndex-cropped-second" src="https://user-images.githubusercontent.com/32497085/150649805-3b660496-6f45-420b-af90-5c0f81698862.png">
 </p>
